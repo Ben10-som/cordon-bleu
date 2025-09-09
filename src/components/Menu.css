@@ -3,6 +3,12 @@
   background: white;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .menu-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -64,7 +70,7 @@
   scrollbar-width: thin;
   scrollbar-color: #ff6b35 #f8f9fa;
   flex: 1;
-  width: calc(100% - 120px); /* Largeur totale moins les boutons */
+  width: calc(100% - 120px);
 }
 
 .dishes-grid::-webkit-scrollbar {
@@ -246,43 +252,318 @@
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
 }
 
-@media (max-width: 768px) {
-  .dishes-container {
-    gap: 0.5rem;
+/* ========== RESPONSIVITÉ AMÉLIORÉE ========== */
+
+/* Tablettes et petits écrans (≤ 992px) */
+@media (max-width: 992px) {
+  .menu {
+    padding: 3rem 0;
   }
   
-  .scroll-btn {
-    display: none; /* Masquer les boutons sur mobile */
+  .container {
+    padding: 0 1.5rem;
   }
   
-  .dishes-grid {
-    gap: 1.5rem;
-    padding: 0.5rem 0;
-    margin: 0;
+  .menu-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .category-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
   
   .dish-card {
     min-width: 280px;
   }
+}
+
+/* Tablettes portrait et gros mobiles (≤ 768px) */
+@media (max-width: 768px) {
+  .menu {
+    padding: 2rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .menu-header {
+    margin-bottom: 2rem;
+  }
+  
+  .menu-header h2 {
+    font-size: 2rem;
+  }
+  
+  .menu-header p {
+    font-size: 1rem;
+  }
+  
+  .menu-category {
+    margin-bottom: 2.5rem;
+  }
+  
+  .category-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dishes-container {
+    gap: 0.5rem;
+  }
+  
+  .scroll-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+  
+  .dishes-grid {
+    gap: 1.5rem;
+    padding: 0.8rem 0;
+    width: calc(100% - 100px);
+  }
+  
+  .dish-card {
+    min-width: 260px;
+  }
+  
+  .dish-image {
+    height: 180px;
+  }
+  
+  .dish-content {
+    padding: 1.2rem;
+  }
+  
+  .dish-name {
+    font-size: 1.2rem;
+  }
+  
+  .dish-description {
+    font-size: 0.9rem;
+  }
+  
+  .dish-price {
+    font-size: 1.1rem;
+  }
+  
+  .btn-order {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobiles moyens (≤ 576px) */
+@media (max-width: 576px) {
+  .menu {
+    padding: 1.5rem 0;
+  }
+  
+  .container {
+    padding: 0 0.8rem;
+  }
+  
+  .menu-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .menu-header p {
+    font-size: 0.95rem;
+  }
+  
+  .category-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .dishes-container {
+    gap: 0.3rem;
+  }
+  
+  .scroll-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .dishes-grid {
+    gap: 1.2rem;
+    padding: 0.6rem 0;
+    width: calc(100% - 90px);
+  }
+  
+  .dish-card {
+    min-width: 240px;
+  }
+  
+  .dish-image {
+    height: 160px;
+  }
+  
+  .dish-content {
+    padding: 1rem;
+  }
+  
+  .dish-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .dish-description {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
   
   .dish-footer {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
     align-items: stretch;
+  }
+  
+  .dish-price {
+    font-size: 1rem;
+    text-align: center;
   }
   
   .btn-order {
     width: 100%;
-    padding: 1rem;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+  }
+}
+
+/* Petits mobiles (≤ 420px) */
+@media (max-width: 420px) {
+  .menu {
+    padding: 1rem 0;
   }
   
-  /* Améliorer le défilement tactile sur mobile */
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .menu-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .menu-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .category-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .category-title::after {
+    width: 40px;
+    height: 2px;
+  }
+  
+  .scroll-btn {
+    display: none; /* Masquer les boutons sur très petits écrans */
+  }
+  
   .dishes-grid {
+    gap: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    margin: 0;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
   }
   
   .dish-card {
+    min-width: 220px;
     scroll-snap-align: start;
+  }
+  
+  .dish-image {
+    height: 140px;
+  }
+  
+  .dish-content {
+    padding: 0.8rem;
+  }
+  
+  .dish-name {
+    font-size: 1rem;
+  }
+  
+  .dish-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .btn-order {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+  
+  .menu-footer {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .menu-footer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-whatsapp-large {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Très petits mobiles (≤ 360px) */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 0.3rem;
+  }
+  
+  .menu-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .category-title {
+    font-size: 1.2rem;
+  }
+  
+  .dish-card {
+    min-width: 200px;
+  }
+  
+  .dish-image {
+    height: 120px;
+  }
+  
+  .dish-content {
+    padding: 0.6rem;
+  }
+  
+  .dish-name {
+    font-size: 0.95rem;
+  }
+  
+  .dish-description {
+    font-size: 0.75rem;
+  }
+  
+  .dish-footer {
+    gap: 0.6rem;
+  }
+  
+  .dish-price {
+    font-size: 0.9rem;
+  }
+  
+  .btn-order {
+    padding: 0.6rem;
+    font-size: 0.8rem;
   }
 }
