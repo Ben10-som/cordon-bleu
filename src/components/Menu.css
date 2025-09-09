@@ -523,7 +523,9 @@
 /* Très petits mobiles (≤ 360px) */
 @media (max-width: 360px) {
   .container {
-    padding: 0 0.3rem;
+    padding: 0 0.2rem; /* Padding minimal */
+    max-width: 100vw;
+    box-sizing: border-box;
   }
   
   .menu-header h2 {
@@ -534,36 +536,44 @@
     font-size: 1.2rem;
   }
   
+  .dishes-grid {
+    gap: 0.6rem; /* Espace minimal entre les cartes */
+  }
+  
   .dish-card {
-    min-width: 200px;
+    min-width: 180px; /* Encore plus petit */
+    max-width: 180px;
   }
   
   .dish-image {
-    height: 120px;
+    height: 100px; /* Plus petit pour voir l'image complète */
   }
   
   .dish-content {
-    padding: 0.6rem;
+    padding: 0.5rem; /* Padding minimal */
   }
   
   .dish-name {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
   }
   
   .dish-description {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
   }
   
   .dish-footer {
-    gap: 0.6rem;
+    gap: 0.5rem;
   }
   
   .dish-price {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   
   .btn-order {
-    padding: 0.6rem;
-    font-size: 0.8rem;
+    padding: 0.5rem;
+    font-size: 0.75rem;
   }
 }
