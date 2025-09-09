@@ -131,6 +131,7 @@ Notes: ${formData.notes}
             </div>
             
             <div className="form-row">
+         
               <div className="form-group">
                 <label htmlFor="date">Date souhaitée *</label>
                 <input
@@ -139,10 +140,11 @@ Notes: ${formData.notes}
                   name="date"
                   value={formData.date}
                   onChange={handleInputChange}
-                  min={getTomorrowDate()}
+                  min={new Date().toISOString().split('T')[0]} // autorise aujourd'hui ou plus tard
                   required
                 />
               </div>
+
               
               <div className="form-group">
                 <label htmlFor="time">Heure souhaitée *</label>
