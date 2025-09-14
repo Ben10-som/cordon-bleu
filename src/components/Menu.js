@@ -32,7 +32,7 @@ const Menu = ({ onOrderClick }) => {
     name: "Neems précuits",
     description: "Petits fours Neems précuits, prêts à frire",
     price: "25 pièces - 4.500 FCFA",
-    category: "Petits Fours",
+    category: "Plats surgelés",
     image: "/images/neems_precuit.jpg"
   },
   {
@@ -48,7 +48,7 @@ const Menu = ({ onOrderClick }) => {
     name: "Pastels précuits",
     description: "Pastels précuits, à réchauffer chez soi",
     price: "25 pièces - 4.500 FCFA",
-    category: "Petits Fours",
+    category: "Plats surgelés",
     image: "/images/pastels_precuit.jpg"
   },
   {

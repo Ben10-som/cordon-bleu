@@ -53,7 +53,7 @@ const Chatbot = () => {
     phones: ["+226 64 32 33 96", "+226 63 61 81 16"],
     email: "cordonbleubf@gmail.com",
     address: "Ouaga 2000, Ouagadougou",
-    whatsapp: "+226 64 32 33 96"
+    whatsapp: "+226 63 61 81 16"
   };
 
   const simulateTyping = (callback, delay = 1000) => {
